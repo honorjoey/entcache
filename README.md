@@ -2,15 +2,8 @@
 
 An experimental cache driver for [ent](https://github.com/ent/ent) with variety of storage options, such as:
 
-1. A `context.Context`-based cache. Usually, attached to an HTTP request.
-
-2. A driver level cache embedded in the `ent.Client`. Used to share cache entries on the process level.
-
-4. A remote cache. For example, a Redis database that provides a persistence layer for storing and sharing cache
-  entries between multiple processes.
-
-4. A cache hierarchy, or multi-level cache allows structuring the cache in hierarchical way. For example, a 2-level cache
-   that composed from an LRU-cache in the application memory, and a remote-level cache backed by a Redis database.
+1. Base on `ariga/entcache`, add Prefix for cache key
+2. Fix Client.Schema.Create not skip cache issue
 
 ## Quick Introduction
 
@@ -200,6 +193,7 @@ client := ent.NewClient(ent.Driver(drv))
 drv := entcache.NewDriver(
     drv,
     entcache.TTL(time.Second),
+    entcache.Prefix("myapp"),
     entcache.Levels(entcache.NewLRU(128)),
 )
 client := ent.NewClient(ent.Driver(drv))
