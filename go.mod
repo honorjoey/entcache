@@ -1,4 +1,4 @@
-module ariga.io/entcache
+module github.com/honorjoey/entcache
 
 go 1.23
 

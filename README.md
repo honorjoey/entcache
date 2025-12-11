@@ -17,7 +17,7 @@ An experimental cache driver for [ent](https://github.com/ent/ent) with variety 
 First, `go get` the package using the following command.
 
 ```shell
-go get ariga.io/entcache
+go get github.com/honorjoey/entcache
 ```
 
 After installing `entcache`, you can easily add it to your project with the snippet below:
@@ -62,7 +62,7 @@ means, that the recorded rows will be returned the next time the query is execut
 
 The package provides a variety of options to configure the TTL of the cache entries, control the hash function, provide
 custom and multi-level cache stores, evict and skip cache entries. See the full documentation in
-[go.dev/entcache](https://pkg.go.dev/ariga.io/entcache).
+[go.dev/entcache](https://pkg.go.dev/github.com/honorjoey/entcache).
 
 ### Caching Levels
 
