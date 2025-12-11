@@ -3,7 +3,8 @@
 An experimental cache driver for [ent](https://github.com/ent/ent) with variety of storage options, such as:
 
 1. Base on `ariga/entcache`, add Prefix for cache key
-2. Fix Client.Schema.Create not skip cache issue
+2. Add entity name to cache key, such as "prefix:User:hash"
+3. Fix Client.Schema.Create not skip cache issue
 
 ## Quick Introduction
 
